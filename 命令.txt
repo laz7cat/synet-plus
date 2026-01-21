@@ -1,0 +1,5 @@
+docker build -t synet-plus .
+docker run --rm -it -v "${PWD}:/workspace/synet-plus" -w /workspace/synet-plus synet-plus bash
+可以考虑不用rm，这样一直能用一个容器
+mkdir -p out/bgp_peers
+python synet/examples/bgp_peers.py out/bgp_peers
